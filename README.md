@@ -1,4 +1,4 @@
-## Setup
+## Cách cài đặt
 
 ```
 npx create-react-app . --template redux-typescript
@@ -31,6 +31,7 @@ npm i -D @typescript-eslint/eslint-plugin
 npm i -D prettier
 npm i -D lint-staged
 npx husky add .husky/pre-commit "npx lint-staged"
+npm i -D react-app-rewired react-app-rewire-alias
 ```
 
 - Install node module:
@@ -38,3 +39,49 @@ npx husky add .husky/pre-commit "npx lint-staged"
 ```
 npm install
 ```
+
+- cấu trúc thư mục:
+
+```
+.
+├──public
+├──src
+|  ├──assets 			# thư mục chứa tài nguyên
+|  |  ├──images	 		# thư mục chứa hình ảnh
+|  |  └── icons 		# thư mục chứa icons
+|  |
+│  ├──components 		# thư mục chứa components
+│  ├──constants 		# thư mục chứa constants
+│  ├──pages 			# thư mục chứa pages
+│  ├──services 			# thư mục chứa apis
+│  ├──store 			# thư mục chứa store redux
+│  |  ├──slices			# thư mục chứa slices redux
+│  |  ├──hooks.ts 		# file custom useDispatch, useSelector
+│  |  └──store.ts 		# file store redux
+│  |
+|  └──utils 			# thư mục chứa các helper
+|
+├──.husky  				# cài đặt git hook với husky và lint-staged
+│
+├──.vscode 				# cài đặt settings của vscode
+|   ├── typescript.code-snippets
+|	|					# cài đặt snippets của vscode
+│   └── settings.json 	# cấu hình eslint cho vscode.
+│
+├──.eslintignore        # cấu hình các file không chạy eslint.
+├──.eslintrc.json       # cấu hình eslint
+├──.gitignore:          # cài đặt các folder/file bỏ qua khi commit.
+├──.prettierrc:         # cài đặt cấu hình cho prettier
+├──config-overrides.js: # cấu hình react-app-rewired
+├──package-lock.json:   # file install chính xác version dependencies
+├──package.json:        # file quản lý dependencies
+├──README.md:           # file mô tả template
+├──tsconfig.json:       # cấu hình typesript
+└──tsconfig.paths.json: # cấu hình path alias.
+```
+
+- Vấn đề đã gặp:
+  - Cấu hình alias path tsconfig nên cấu hình ở một file khác và extends vào tsconfig.json.
+  - baseUrl nên là "." nếu là src hay ./src thì không biết sao nó lỗi
+  - Craco có vẻ không hoạt động tốt với typescipt( maybe) nên dùng một cái khác thay thế là react-app-rewired.
+  - Có vẻ như format on save , code action on save bị xung đột, vẫn chưa có dùng eslint extension format all file mà chỉ được một file.

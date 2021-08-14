@@ -1,9 +1,15 @@
 {
   "env": {
+    "node": true,
     "browser": true,
     "es2021": true
   },
-  "extends": ["plugin:react/recommended", "airbnb", "plugin:@typescript-eslint/recommended", ""],
+  "extends": [
+    "plugin:react/recommended",
+    "airbnb",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:import/recommended"
+  ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaFeatures": {
@@ -12,10 +18,28 @@
     "ecmaVersion": 12,
     "sourceType": "module"
   },
-  "plugins": ["react", "@typescript-eslint", "react-hooks"],
+  "plugins": ["react", "@typescript-eslint", "react-hooks", "import"],
   "settings": {
     "import/resolver": {
-      "typescript": {}
+      "alias": {
+        "map": [
+          // And all your import aliases
+          ["@", "./src"],
+          ["@Component", "./src/components"],
+          ["@Page", "./src/pages"],
+          ["@Store", "./src/store"],
+          ["@Constant", "./src/constants"],
+          ["@Slice", "./src/store/slices"],
+          ["@Util", "./src/utils"],
+          ["@Asset", "./src/assets"],
+          ["@Image", "./src/assets/images"],
+          ["@Icon", "./src/assets/icons"]
+        ],
+        "extensions": [".ts", ".tsx", ".js", ".jsx", ".json"]
+      }
+    },
+    "flowtype": {
+      "onlyFilesWithFlowAnnotation": true
     }
   },
   "rules": {
