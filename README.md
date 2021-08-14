@@ -1,4 +1,15 @@
-## Cách cài đặt
+# Template project React, Typescript
+
+> Đây là template tạo bởi create-react-app, redux, typescript, đã set up eslint, prettier cho format, husky, lint-taged cho git commit, path alias với react-app-rewired, những snippet cho typescript
+
+## Table of Contents
+
+- [How to set up](#how-to-set-up)
+- [Install node module](#install-node-module)
+- [Folder structure](#folder-structure)
+- [Problem](#problem)
+
+## How to set up
 
 ```
 npx create-react-app . --template redux-typescript
@@ -34,13 +45,13 @@ npx husky add .husky/pre-commit "npx lint-staged"
 npm i -D react-app-rewired react-app-rewire-alias
 ```
 
-- Install node module:
+## Install node module:
 
 ```
 npm install
 ```
 
-- cấu trúc thư mục:
+## Folder Structure:
 
 ```
 .
@@ -65,7 +76,7 @@ npm install
 │
 ├──.vscode 				# cài đặt settings của vscode
 |   ├── typescript.code-snippets
-|	|					# cài đặt snippets của vscode
+|   |					# cài đặt snippets của vscode
 │   └── settings.json 	# cấu hình eslint cho vscode.
 │
 ├──.eslintignore        # cấu hình các file không chạy eslint.
@@ -80,8 +91,9 @@ npm install
 └──tsconfig.paths.json: # cấu hình path alias.
 ```
 
-- Vấn đề đã gặp:
-  - Cấu hình alias path tsconfig nên cấu hình ở một file khác và extends vào tsconfig.json.
-  - baseUrl nên là "." nếu là src hay ./src thì không biết sao nó lỗi
-  - Craco có vẻ không hoạt động tốt với typescipt( maybe) nên dùng một cái khác thay thế là react-app-rewired.
-  - Có vẻ như format on save , code action on save bị xung đột, vẫn chưa có dùng eslint extension format all file mà chỉ được một file.
+## Problem:
+
+- Cấu hình alias path tsconfig nên cấu hình ở một file khác và extends vào tsconfig.json.
+- baseUrl nên là "." nếu là src hay ./src thì không biết sao nó lỗi
+- Craco có vẻ không hoạt động tốt với typescipt( maybe) nên dùng một cái khác thay thế là react-app-rewired.
+- Có vẻ như format on save , code action on save bị xung đột, vẫn chưa có dùng eslint extension format all file mà chỉ được một file.
