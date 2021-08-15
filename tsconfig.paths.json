@@ -4,13 +4,13 @@
     "paths": {
       "@Component/*": ["src/components/*"],
       "@Store/*": ["src/store/*"],
-      "@Constant/*": ["./constants/*"],
-      "@Slice/*": ["./store/slices/*"],
-      "@Page/*": ["./pages/*"],
-      "@Assets/*": ["./assets/*"],
-      "@Image/*": ["./assets/images/*"],
-      "@Icons/*": ["./assets/icons/*"],
-      "@Util/*": ["./utils/*"]
+      "@Constant/*": ["src/constants/*"],
+      "@Slice/*": ["src/store/slices/*"],
+      "@Page/*": ["src/pages/*"],
+      "@Assets/*": ["src/assets/*"],
+      "@Image/*": ["src/assets/images/*"],
+      "@Icons/*": ["src/assets/icons/*"],
+      "@Util/*": ["src/utils/*"]
     }
   }
 }

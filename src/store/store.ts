@@ -1,8 +1,24 @@
-import { Action, configureStore, ThunkAction } from '@reduxjs/toolkit';
+import { Action, AnyAction, CombinedState, combineReducers, configureStore, ThunkAction } from '@reduxjs/toolkit';
 
-import counterReducer from '../features/counter/counterSlice';
+import { LOG_OUT } from '@Constant/auth';
+import noteReducer from '@Slice/noteSlice';
+import userReducer from '@Slice/userSlice';
 
-export const store = configureStore({ reducer: { counter: counterReducer } });
+type RootReducer = CombinedState<{
+  user: ReturnType<typeof userReducer>;
+  note: ReturnType<typeof noteReducer>;
+}>;
+type State = RootReducer | undefined;
+const appReducer = combineReducers({ user: userReducer, note: noteReducer });
+
+const rootReducer = (state: State, action: AnyAction): RootReducer => {
+  if (action.type === LOG_OUT) state = undefined;
+  return appReducer(state, action);
+};
+
+const store = configureStore({ reducer: rootReducer });
+
+export default store;
 
 export type AppDispatch = typeof store.dispatch;
 export type RootState = ReturnType<typeof store.getState>;

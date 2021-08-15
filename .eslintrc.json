@@ -116,9 +116,10 @@
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
     "react/prop-types": "off",
-    "no-param-reassign": ["error", { "props": true, "ignorePropertyModificationsFor": ["state"] }],
+    "no-param-reassign": "off",
     "implicit-arrow-linebreak": "off",
     "arrow-body-style": ["error", "as-needed", { "requireReturnForObjectLiteral": true }],
-    "operator-linebreak": "off"
+    "operator-linebreak": "off",
+    "@typescript-eslint/no-non-null-assertion": "off"
   }
 }
