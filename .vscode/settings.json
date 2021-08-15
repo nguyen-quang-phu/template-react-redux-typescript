@@ -1,5 +1,62 @@
 {
+  //eslint setting
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
+  },
+  // template folder setting
+  "folderTemplates.structures": [
+    {
+      "name": "React Typescipt Component",
+      "customVariables": [],
+      "omitParentDirectory": true,
+      "structure": [
+        {
+          "fileName": "<FTName|capitalize>/<FTName|capitalize>.tsx",
+          "template": "Typescript Functional Component"
+        },
+        {
+          "fileName": "<FTName|capitalize>/<FTName|capitalize>.module.scss",
+          "template": "SCSS"
+        }
+      ]
+    },
+    {
+      "name": "React Typescipt Template Page",
+      "customVariables": [],
+      "omitParentDirectory": true,
+      "structure": [
+        {
+          "fileName": "<FTName|capitalize>/<FTName|capitalize>.tsx",
+          "template": "Typescript Functional Component"
+        },
+        {
+          "fileName": "<FTName|capitalize>/<FTName|capitalize>.stories.tsx",
+          "template": "Story Book Template Page"
+        }
+      ]
+    }
+  ],
+  // template file setting
+  "folderTemplates.fileTemplates": {
+    "Typescript Functional Component": [
+      "import React from 'react';",
+      "",
+      "import classes from './<FTName|capitalize>.module.scss';",
+      "",
+      "interface <FTName|capitalize>Props {",
+      "template?: string;",
+      "}",
+      "",
+      "const <FTName|capitalize>:React.FC<<FTName|capitalize>Props> = ({ template }) => {",
+      "const temp = 0;",
+      "return <div>",
+      "<FTName|capitalize>",
+      "</div>;",
+      "};",
+      "",
+      "<FTName|capitalize>.defaultProps = {};",
+      "export default <FTName|capitalize>;"
+    ],
+    "SCSS": [".<FTName|lowercase>{", "", "}"]
   }
 }

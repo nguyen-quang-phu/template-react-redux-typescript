@@ -1,10 +1,23 @@
 {
-    "Print to console": {
-        "prefix": "fog",
-        "body": [
-            "console.log('$1');",
-            "$2"
-        ],
-        "description": "Log output to console"
-    }
+  // React
+  "React Arrow Function Component Export": {
+    "prefix": ["rafce", "ReactArrowFunctionComponentExport"],
+    "body": [
+      "import React from 'react';",
+      "",
+      "import classes from './${1}.module.scss';",
+      "",
+      "interface ${1}Props {",
+      "  template?: string;",
+      "}",
+      "const ${1:$TM_FILENAME_BASE}: React.FC<${1}Props> = ({ template }) => {",
+      "  const temp = 0;",
+      "  return <div>$1$0</div>;",
+      "};",
+      "",
+      "${1}.defaultProps = {};",
+      "export default ${1};"
+    ],
+    "description": "React Module Arrow Function Component Export"
+  }
 }
