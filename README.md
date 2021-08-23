@@ -1,31 +1,11 @@
 ---
-description: TEST
+description: >-
+  Đây là template tạo bởi create-react-app, redux, typescript, đã set up eslint,
+  prettier cho format, husky, lint-taged cho git commit, path alias với
+  react-app-rewired, những snippet cho typescript
 ---
 
 # Template project React, Typescript
-
-## Getting Super Powers
-
-Becoming a super hero is a fairly straight forward process:
-
-```
-$ give me super-powers
-```
-
-{% hint style="info" %}
- Super-powers are granted randomly so please submit an issue if you're not happy with yours.
-{% endhint %}
-
-Once you're strong enough, save the world:
-
-{% code title="hello.sh" %}
-```bash
-# Ain't no code for that yet, sorry
-echo 'You got to trust me on this, I saved the world'
-```
-{% endcode %}
-
-> Đây là template tạo bởi create-react-app, redux, typescript, đã set up eslint, prettier cho format, husky, lint-taged cho git commit, path alias với react-app-rewired, những snippet cho typescript
 
 ## Table of Contents
 
