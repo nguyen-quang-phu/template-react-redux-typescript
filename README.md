@@ -1,42 +1,67 @@
+---
+description: TEST
+---
+
 # Template project React, Typescript
+
+## Getting Super Powers
+
+Becoming a super hero is a fairly straight forward process:
+
+```
+$ give me super-powers
+```
+
+{% hint style="info" %}
+ Super-powers are granted randomly so please submit an issue if you're not happy with yours.
+{% endhint %}
+
+Once you're strong enough, save the world:
+
+{% code title="hello.sh" %}
+```bash
+# Ain't no code for that yet, sorry
+echo 'You got to trust me on this, I saved the world'
+```
+{% endcode %}
 
 > Đây là template tạo bởi create-react-app, redux, typescript, đã set up eslint, prettier cho format, husky, lint-taged cho git commit, path alias với react-app-rewired, những snippet cho typescript
 
 ## Table of Contents
 
-- [How to set up](#how-to-set-up)
-- [Install node module](#install-node-module)
-- [Folder structure](#folder-structure)
-- [Problem](#problem)
+* [How to set up](./#how-to-set-up)
+* [Install node module](./#install-node-module)
+* [Folder structure](./#folder-structure)
+* [Problem](./#problem)
 
 ## How to set up
 
-```
+```text
 npx create-react-app . --template redux-typescript
 npm i -D eslint
 npx eslint --init
 ```
 
-- How would you like to use ESLint?
-  - [x] To check syntax, find problems, and enforce code style
-- What type of modules does your project use?
-  - [x] JavaSript modules (import/export)
-- Which framework does your project use?
-  - [x] React
-- Does your project ues TypeScipt?
-  - [x] Yes
-- Where does your code run?
-  - [x] Browser
-- How would you like to define a style for your project?
-  - [x] Use a popular style guide
-- Which style guide do you want to follow?
-  - [x] Airbnb
-- What format do you want your config file to be in?
-  - [x] JSON
-- Would you like to install them now with npm?:
-  - [x] Yes
+* How would you like to use ESLint?
+  * [x] To check syntax, find problems, and enforce code style
+* What type of modules does your project use?
+  * [x] JavaSript modules \(import/export\)
+* Which framework does your project use?
+  * [x] React
+* Does your project ues TypeScipt?
+  * [x] Yes
+* Where does your code run?
+  * [x] Browser
+* How would you like to define a style for your project?
+  * [x] Use a popular style guide
+* Which style guide do you want to follow?
+  * [x] Airbnb
+* What format do you want your config file to be in?
+  * [x] JSON
+* Would you like to install them now with npm?:
+  * [x] Yes
 
-```
+```text
 npm i -D eslint-import-resolver-typescript
 npm i -D @typescript-eslint/eslint-plugin
 npm i -D prettier
@@ -47,37 +72,37 @@ npm i -D react-app-rewired react-app-rewire-alias
 
 ## Install node module:
 
-```
+```text
 npm install
 ```
 
 ## Folder Structure:
 
-```
+```text
 .
 ├──public
 ├──src
-|  ├──assets 			# thư mục chứa tài nguyên
-|  |  ├──images	 		# thư mục chứa hình ảnh
-|  |  └── icons 		# thư mục chứa icons
+|  ├──assets             # thư mục chứa tài nguyên
+|  |  ├──images             # thư mục chứa hình ảnh
+|  |  └── icons         # thư mục chứa icons
 |  |
-│  ├──components 		# thư mục chứa components
-│  ├──constants 		# thư mục chứa constants
-│  ├──pages 			# thư mục chứa pages
-│  ├──services 			# thư mục chứa apis
-│  ├──store 			# thư mục chứa store redux
-│  |  ├──slices			# thư mục chứa slices redux
-│  |  ├──hooks.ts 		# file custom useDispatch, useSelector
-│  |  └──store.ts 		# file store redux
+│  ├──components         # thư mục chứa components
+│  ├──constants         # thư mục chứa constants
+│  ├──pages             # thư mục chứa pages
+│  ├──services             # thư mục chứa apis
+│  ├──store             # thư mục chứa store redux
+│  |  ├──slices            # thư mục chứa slices redux
+│  |  ├──hooks.ts         # file custom useDispatch, useSelector
+│  |  └──store.ts         # file store redux
 │  |
-|  └──utils 			# thư mục chứa các helper
+|  └──utils             # thư mục chứa các helper
 |
-├──.husky  				# cài đặt git hook với husky và lint-staged
+├──.husky                  # cài đặt git hook với husky và lint-staged
 │
-├──.vscode 				# cài đặt settings của vscode
+├──.vscode                 # cài đặt settings của vscode
 |   ├── typescript.code-snippets
-|   |					# cài đặt snippets của vscode
-│   └── settings.json 	# cấu hình eslint cho vscode.
+|   |                    # cài đặt snippets của vscode
+│   └── settings.json     # cấu hình eslint cho vscode.
 │
 ├──.eslintignore        # cấu hình các file không chạy eslint.
 ├──.eslintrc.json       # cấu hình eslint
@@ -93,7 +118,8 @@ npm install
 
 ## Problem:
 
-- Cấu hình alias path tsconfig nên cấu hình ở một file khác và extends vào tsconfig.json.
-- baseUrl nên là "." nếu là src hay ./src thì không biết sao nó lỗi
-- Craco có vẻ không hoạt động tốt với typescipt( maybe) nên dùng một cái khác thay thế là react-app-rewired.
-- Có vẻ như format on save , code action on save bị xung đột, vẫn chưa có dùng eslint extension format all file mà chỉ được một file.
+* Cấu hình alias path tsconfig nên cấu hình ở một file khác và extends vào tsconfig.json.
+* baseUrl nên là "." nếu là src hay ./src thì không biết sao nó lỗi
+* Craco có vẻ không hoạt động tốt với typescipt\( maybe\) nên dùng một cái khác thay thế là react-app-rewired.
+* Có vẻ như format on save , code action on save bị xung đột, vẫn chưa có dùng eslint extension format all file mà chỉ được một file.
+
